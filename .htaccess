@@ -20,3 +20,11 @@
 php_flag opcache.enable Off
 
 # ------  /JACGWD ------------- #
+
+
+# ----- AVOID CORS FONT LOADING ERRORS ------- #
+<FilesMatch ".(eot|otf|ttf|woff|woff2)">
+    Header always set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+# ----- /AVOID CORS FONT LOADING ERRORS ------- #
